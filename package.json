@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "OhMyFood - un site 100% mobile qui répertorie les menus de restaurants gastronomiques.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michaelbr-Dev/OCR-Projet-3.git"
+  },
+  "keywords": [
+    "ohmyfood"
+  ],
+  "author": "Michael Briquet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michaelbr-Dev/OCR-Projet-3/issues"
+  },
+  "homepage": "https://michaelbr-dev.github.io/OCR-Projet-3"
+}
