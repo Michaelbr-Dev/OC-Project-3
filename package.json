@@ -4,7 +4,7 @@
   "description": "OhMyFood - un site 100% mobile qui répertorie les menus de restaurants gastronomiques.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
   },
   "repository": {
     "type": "git",
