@@ -1,0 +1,20 @@
+.header {
+  &__logo {
+    @include mobile {
+      width: 90%;
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+.explore {
+  &__location {
+
+    @include mobile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

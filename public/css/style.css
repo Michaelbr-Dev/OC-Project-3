@@ -20,4 +20,20 @@ a {
   text-decoration: none;
 }
 
+@media all and (max-width: 767px) {
+  .header__logo {
+    width: 90%;
+    margin: 1.5rem 0;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .explore__location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
