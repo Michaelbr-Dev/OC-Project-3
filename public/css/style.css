@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikand&display=swap");
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
 
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+div,
+a {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style.css.map */
