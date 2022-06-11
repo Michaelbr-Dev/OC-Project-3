@@ -1,19 +1,27 @@
 // Media Queries
 
-@mixin mobile {
-  @media all and (max-width: map-get($breakpoint, mobile-max)) {
+@mixin for-phone-only {
+  @media (max-width: map-get($breakpoint, phone-only)) {
     @content;
   }
 }
-
-@mixin tablet {
-  @media all and (min-width: map-get($breakpoint, tablet-min)) and (max-width: map-get($breakpoint, tablet-max)) {
+@mixin for-tablet-portrait-up {
+  @media (min-width: map-get($breakpoint, tablet-portrait)) {
     @content;
   }
 }
-
-@mixin desktop {
-  @media all and (min-width: map-get($breakpoint, desktop-min)) {
+@mixin for-tablet-landscape-up {
+  @media (min-width: map-get($breakpoint, tablet-landscape)) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: map-get($breakpoint, desktop)) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: map-get($breakpoint, desktop-up)) {
     @content;
   }
 }

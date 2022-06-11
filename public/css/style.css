@@ -70,14 +70,16 @@ a {
   text-decoration: none;
 }
 
-@media all and (max-width: 767px) {
+/* Header */
+@media (max-width: 599px) {
   .header__logo {
-    width: 90%;
-    margin: 1.5rem 0;
+    margin: 0 auto;
+    padding: 1.5rem 0;
   }
 }
 
-@media all and (max-width: 767px) {
+/* Exploration */
+@media (max-width: 599px) {
   .explore__location {
     display: flex;
     flex-direction: row;
@@ -85,5 +87,9 @@ a {
     justify-content: center;
   }
 }
+
+/* Working */
+/* Restaurants */
+/* Footer */
 
 /*# sourceMappingURL=style.css.map */
