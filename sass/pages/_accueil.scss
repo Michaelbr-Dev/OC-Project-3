@@ -1,9 +1,17 @@
 /* Header */
 .header {
   &__logo {
+    text-align: center;
+    font-family: $font-logo-title;
+    font-weight: 900;
+
     @include for-phone-only {
-      margin: 0 auto;
-      padding: 1.5rem 0;
+      margin: 1.5rem 0;
+      font-size: 2rem;
+    }
+
+    a {
+        text-decoration: none;
     }
   }
 }
@@ -11,12 +19,39 @@
 /* Exploration */
 .explore {
   &__location {
+    border-top: 3px solid $color-grey2;
+    background-color: $color-grey3;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    &__icon {
+      margin-right: 25px;
+    }
 
     @include for-phone-only {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
+    }
+  }
+
+  &__content {
+    &__text {
+      padding-top: 2rem;
+      background-color: $color-grey4;
+      text-align: center;
+
+      & h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+      }
+
+      & h2 {
+          padding-top: 1rem;
+          font-size: 1.5rem;
+          font-weight: 300;
+      }
     }
   }
 }

@@ -1,48 +1,71 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikand&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
-  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  font-weight: normal;
 }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
+ul {
   list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
+button,
+input,
+select {
+  margin: 0;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
 }
 
 table {
@@ -50,35 +73,38 @@ table {
   border-spacing: 0;
 }
 
-h1 {
-  font-family: "Shrikhand", cursive;
-  font-weight: normal;
-}
-
-h2,
-h3,
-h4,
-h5,
-p,
-li,
-div,
-a {
-  font-family: "Roboto", sans-serif;
-}
-
-a {
-  text-decoration: none;
+td,
+th {
+  padding: 0;
 }
 
 /* Header */
+.header__logo {
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+}
 @media (max-width: 599px) {
   .header__logo {
-    margin: 0 auto;
-    padding: 1.5rem 0;
+    margin: 1.5rem 0;
+    font-size: 2rem;
   }
+}
+.header__logo a {
+  text-decoration: none;
 }
 
 /* Exploration */
+.explore__location {
+  border-top: 3px solid #b5b5b5;
+  background-color: #dbdbdb;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.explore__location__icon {
+  margin-right: 25px;
+}
 @media (max-width: 599px) {
   .explore__location {
     display: flex;
@@ -86,6 +112,20 @@ a {
     align-items: center;
     justify-content: center;
   }
+}
+.explore__content__text {
+  padding-top: 2rem;
+  background-color: #e8e8e8;
+  text-align: center;
+}
+.explore__content__text h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.explore__content__text h2 {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 /* Working */
