@@ -1,5 +1,15 @@
-@import './utils/reset';
 @import './utils/variables';
 @import './utils/responsive';
+
+@import './base/reset';
 @import './base/typography';
+@import './base/animations';
+
+@import './layouts/header';
+@import './layouts/footer';
+
+@import './components/button';
+@import './components/cards';
+
 @import './pages/accueil';
+@import './pages/restaurants';
