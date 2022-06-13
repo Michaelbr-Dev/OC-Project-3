@@ -1,12 +1,10 @@
-
 /* Exploration */
 .explore {
   font-family: $font-txt;
-  border-top: 3px solid $color-grey20;
-  background-color: $color-grey60;
+  border-top: 3px solid $color-grey60;
+  background-color: $color-grey70;
 
   &__location {
-    
     padding: 1rem;
     font-size: 1.3rem;
     font-weight: 900;
@@ -20,7 +18,7 @@
       border: none;
       background-color: transparent;
 
-      &:focus{
+      &:focus {
         outline: none;
       }
     }
@@ -30,14 +28,14 @@
     }
 
     @include for-phone-only {
-      @include flex(row, wrap, center, center)
+      @include flex(row, wrap, center, center);
     }
   }
 
   &__content {
     &__text {
-      padding-top: 1.5rem;
-      background-color: $color-grey70;
+      padding: 2.5rem 0;
+      background-color: $color-grey80;
       text-align: center;
 
       & h1 {
@@ -66,7 +64,7 @@
 .working {
   padding-left: 1rem;
 
-  @include for-phone-only{
+  @include for-phone-only {
     @include flex(column, nowrap, center, center);
   }
 
@@ -77,10 +75,10 @@
     font-weight: 600;
   }
 
-  &__btn{
+  &__btn {
     @include for-phone-only;
     list-style-type: none;
-    
+
     &__content {
       @include flex(row, nowrap, space-between, center);
       padding: 0.5rem 0;
@@ -92,6 +90,7 @@
 /* Restaurants */
 .restaurants {
   padding-left: 1rem;
+  background-color: $color-grey80;
 
   &__title {
     padding-top: 2rem;
@@ -101,10 +100,11 @@
   }
 
   &__card {
-
     &__img {
-      width: 100%;
-      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

@@ -62,7 +62,7 @@ table {
 }
 @media (max-width: 599px) {
   .header__logo {
-    margin: 0.4rem 0;
+    margin: 1.2rem 0;
     font-size: 2.5rem;
   }
 }
@@ -75,7 +75,7 @@ table {
 
 /* Footer */
 .footer {
-  background-color: rgb(53, 53, 53);
+  background-color: rgb(43, 43, 43);
   color: white;
   padding: 1.5rem;
 }
@@ -120,8 +120,8 @@ table {
 /* Exploration */
 .explore {
   font-family: "Roboto", sans-serif;
-  border-top: 3px solid #686868;
-  background-color: #cecece;
+  border-top: 3px solid #c4c4c4;
+  background-color: #dedede;
 }
 .explore__location {
   padding: 1rem;
@@ -159,8 +159,8 @@ table {
   }
 }
 .explore__content__text {
-  padding-top: 1.5rem;
-  background-color: #e8e8e8;
+  padding: 2.5rem 0;
+  background-color: #f7f7f7;
   text-align: center;
 }
 .explore__content__text h1 {
@@ -182,7 +182,7 @@ table {
   background: linear-gradient(350deg, #9356DC, #FF79DA);
   border: 0;
   border-radius: 30px;
-  box-shadow: 0.25rem 0.25rem 10px #b5b5b5;
+  box-shadow: 0.25rem 0.25rem 10px #ababab;
   font-size: 1.1rem;
   padding-top: 1em;
   width: 240px;
@@ -192,7 +192,7 @@ table {
   transition-duration: 0.25s;
 }
 .explore__content__btn:hover {
-  box-shadow: 0.25rem 0.25rem 10px rgb(53, 53, 53);
+  box-shadow: 0.25rem 0.25rem 10px rgb(43, 43, 43);
 }
 .explore__content__btn a {
   text-decoration: none;
@@ -245,12 +245,13 @@ table {
 }
 .working__btn__content__icon {
   margin: 1.5rem;
-  color: #828282;
+  color: #787878;
 }
 
 /* Restaurants */
 .restaurants {
   padding-left: 1rem;
+  background-color: #f7f7f7;
 }
 .restaurants__title {
   padding-top: 2rem;
@@ -258,7 +259,7 @@ table {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.restaurants__card__img {
+.restaurants__card__img img {
   width: 100%;
   height: auto;
 }/*# sourceMappingURL=main.css.map */

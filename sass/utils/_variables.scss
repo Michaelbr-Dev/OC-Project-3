@@ -3,7 +3,7 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-grey: rgb(53,53,53);
+$color-grey: rgb(43, 43, 43);
 $color-grey10: lighten($color-grey, 10%);
 $color-grey20: lighten($color-grey, 20%);
 $color-grey30: lighten($color-grey, 30%);
@@ -13,7 +13,6 @@ $color-grey60: lighten($color-grey, 60%);
 $color-grey70: lighten($color-grey, 70%);
 $color-grey80: lighten($color-grey, 80%);
 $color-grey90: lighten($color-grey, 90%);
-
 
 // Media Queries
 $breakpoint:(
