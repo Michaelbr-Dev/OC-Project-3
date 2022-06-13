@@ -248,4 +248,17 @@ table {
   color: #828282;
 }
 
-/* Restaurants *//*# sourceMappingURL=main.css.map */
+/* Restaurants */
+.restaurants {
+  padding-left: 1rem;
+}
+.restaurants__title {
+  padding-top: 2rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.restaurants__card__img {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=main.css.map */

@@ -63,7 +63,6 @@
 }
 
 /* Working */
-
 .working {
   padding-left: 1rem;
 
@@ -91,3 +90,21 @@
 }
 
 /* Restaurants */
+.restaurants {
+  padding-left: 1rem;
+
+  &__title {
+    padding-top: 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__card {
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
