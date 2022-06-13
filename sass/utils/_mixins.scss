@@ -1,0 +1,10 @@
+
+// Mixin Flex-box
+@mixin flex($dir: column, $wrap: wrap, $jc: center, $ai: flex-start)
+{
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $jc;
+    align-items: $ai;
+}
