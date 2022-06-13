@@ -2,8 +2,8 @@
 /* Exploration */
 .explore {
   font-family: $font-txt;
-  border-top: 3px solid $color-grey2;
-  background-color: $color-grey3;
+  border-top: 3px solid $color-grey20;
+  background-color: $color-grey60;
 
   &__location {
     
@@ -14,18 +14,30 @@
       margin-right: 15px;
     }
 
+    &__input {
+      width: 50%;
+      font-size: 1.2rem;
+      border: none;
+      background-color: transparent;
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    ::placeholder {
+      color: black;
+    }
+
     @include for-phone-only {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      @include flex(row, wrap, center, center)
     }
   }
 
   &__content {
     &__text {
       padding-top: 1.5rem;
-      background-color: $color-grey4;
+      background-color: $color-grey70;
       text-align: center;
 
       & h1 {
@@ -51,5 +63,31 @@
 }
 
 /* Working */
+
+.working {
+  padding-left: 1rem;
+
+  @include for-phone-only{
+    @include flex(column, nowrap, center, center);
+  }
+
+  &__title {
+    padding-top: 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__btn{
+    @include for-phone-only;
+    list-style-type: none;
+    
+    &__content {
+      @include flex(row, nowrap, space-between, center);
+      padding: 0.5rem 0;
+      @include home-btn;
+    }
+  }
+}
 
 /* Restaurants */

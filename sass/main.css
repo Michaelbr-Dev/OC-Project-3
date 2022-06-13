@@ -140,6 +140,12 @@ table {
 .explore__location__input:focus {
   outline: none;
 }
+.explore__location ::-moz-placeholder {
+  color: black;
+}
+.explore__location :-ms-input-placeholder {
+  color: black;
+}
 .explore__location ::placeholder {
   color: black;
 }
@@ -242,6 +248,4 @@ table {
   color: #828282;
 }
 
-/* Restaurants */
-
-/*# sourceMappingURL=style.css.map */
+/* Restaurants *//*# sourceMappingURL=main.css.map */
