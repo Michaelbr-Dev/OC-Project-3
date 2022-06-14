@@ -7,7 +7,7 @@
   @include for-phone-only {
     @include flex(column, nowrap, space-around, flex-start);
   }
-  background-color: $color-grey;
+  background-color: $footer-bg;
   color: white;
   padding: 1.5rem;
 

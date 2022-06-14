@@ -1,8 +1,8 @@
 /* Exploration */
 .explore {
   font-family: $font-txt;
-  border-top: 3px solid $color-grey60;
-  background-color: $color-grey70;
+  border-top: 3px solid $color-grey;
+  background-color: $color-grey2;
 
   &__location {
     padding: 1rem;
@@ -35,7 +35,7 @@
   &__content {
     &__text {
       padding: 2.5rem 0;
-      background-color: $color-grey80;
+      background-color: $color-grey3;
       text-align: center;
 
       & h1 {
@@ -90,7 +90,7 @@
 /* Restaurants */
 .restaurants {
   padding-left: 1rem;
-  background-color: $color-grey80;
+  background-color: $color-grey3;
 
   &__title {
     padding-top: 2rem;
