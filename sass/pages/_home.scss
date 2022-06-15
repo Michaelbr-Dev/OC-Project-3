@@ -1,8 +1,16 @@
+// import files
+@use "../utils/variables" as vars;
+@use "../base/typography" as typo;
+@use "../utils/mixins";
+@use "../utils/responsive"as mq;
+@use "../components/button" as btn;
+@use "../components/cards";
+
 /* Exploration */
 .explore {
-  font-family: $font-txt;
-  border-top: 3px solid $color-grey;
-  background-color: $color-grey2;
+  font-family: typo.$font-txt;
+  border-top: 3px solid vars.$color-grey;
+  background-color: vars.$color-grey2;
 
   &__location {
     padding: 1rem;
@@ -27,15 +35,15 @@
       color: black;
     }
 
-    @include for-phone-only {
-      @include flex(row, wrap, center, center);
+    @include mq.for-phone-only {
+      @include mixins.flex(row, wrap, center, center);
     }
   }
 
   &__content {
     &__text {
       padding: 2.5rem 0;
-      background-color: $color-grey3;
+      background-color: vars.$color-grey3;
       text-align: center;
 
       & h1 {
@@ -55,7 +63,7 @@
     }
 
     &__btn {
-      @include btn;
+      @include btn.btn;
     }
   }
 }
@@ -64,8 +72,8 @@
 .working {
   padding-left: 1rem;
 
-  @include for-phone-only {
-    @include flex(column, nowrap, center, center);
+  @include mq.for-phone-only {
+    @include mixins.flex(column, nowrap, center, center);
   }
 
   &__title {
@@ -76,11 +84,11 @@
   }
 
   &__btn {
-    @include for-phone-only;
+    @include mq.for-phone-only;
     list-style-type: none;
 
     &__content {
-      @include flex(row, nowrap, space-between, center);
+      @include mixins.flex(row, nowrap, space-between, center);
       padding: 0.5rem 0;
     }
   }
@@ -88,8 +96,9 @@
 
 /* Restaurants */
 .restaurants {
+  @include mq.for-phone-only;
   padding-left: 1rem;
-  background-color: $color-grey3;
+  background-color: vars.$color-grey3;
 
   &__title {
     padding-top: 2rem;

@@ -1,30 +1,37 @@
 // This is the single file output by Sass.
 // It is intended to ONLY @import other files.
 
+// @Use 
+
 // 1 - UTILS
-@import './utils/reset';
-@import './utils/variables';
-@import './utils/responsive';
-@import './utils/mixins';
+@use "./utils/reset";
+@use "./utils/variables";
+@use "./utils/responsive";
+@use "./utils/mixins";
 
 // 2 - VENDORS
 // N/A
 
 // 3 - BASE
-@import './base/typography';
-@import './base/animations';
+//@use "./base/animations";
 
 // 4 - LAYOUT
-@import './layout/header';
-@import './layout/footer';
+@use "./layout/header";
+@use "./layout/footer";
 
 // 5 - COMPONENTS
-@import './components/button';
-@import './components/cards';
+@use "./components/button";
+@use "./components/cards";
 
 // 6 - PAGES
-@import './pages/home';
-@import './pages/restaurants';
+@use "./pages/home";
+@use "./pages/restaurants";
 
 // 7 - THEMES
 // N/A
+
+
+// @Import
+
+// Base
+@import './base/typography';

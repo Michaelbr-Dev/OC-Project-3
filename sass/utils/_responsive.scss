@@ -1,27 +1,30 @@
+// Import files
+@use "../utils/variables" as vars;
+
 // Media Queries
 
 @mixin for-phone-only {
-  @media (max-width: map-get($breakpoint, phone-only)) {
+  @media (max-width: map-get(vars.$breakpoint, phone-only)) {
     @content;
   }
 }
 @mixin for-tablet-portrait-up {
-  @media (min-width: map-get($breakpoint, tablet-portrait)) {
+  @media (min-width: map-get(vars.$breakpoint, tablet-portrait)) {
     @content;
   }
 }
 @mixin for-tablet-landscape-up {
-  @media (min-width: map-get($breakpoint, tablet-landscape)) {
+  @media (min-width: map-get(vars.$breakpoint, tablet-landscape)) {
     @content;
   }
 }
 @mixin for-desktop {
-  @media (min-width: map-get($breakpoint, desktop)) {
+  @media (min-width: map-get(vars.$breakpoint, desktop)) {
     @content;
   }
 }
 @mixin for-desktop-up {
-  @media (min-width: map-get($breakpoint, desktop-up)) {
+  @media (min-width: map-get(vars.$breakpoint, desktop-up)) {
     @content;
   }
 }

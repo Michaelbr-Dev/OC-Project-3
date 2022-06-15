@@ -2,17 +2,24 @@
 // This file contains all styles related to the footer of the site.
 // -----------------------------------------------------------------------------
 
+// Import files
+@use "../utils/responsive" as mq;
+@use "../base/typography" as typo;
+@use "../utils/variables" as vars;
+@use "../utils/mixins";
+
+
 /* Footer */
 .footer {
-  @include for-phone-only {
-    @include flex(column, nowrap, space-around, flex-start);
+  @include mq.for-phone-only {
+    @include mixins.flex(column, nowrap, space-around, flex-start);
   }
-  background-color: $footer-bg;
+  background-color: vars.$footer-bg;
   color: white;
   padding: 1.5rem;
 
   &__logo {
-    font-family: $font-logo;
+    font-family: typo.$font-logo;
     font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 1rem;
@@ -23,7 +30,7 @@
   }
 
   &__liens {
-    @include flex(row, nowrap, flex-start);
+    @include mixins.flex(row, nowrap, flex-start);
     margin: 0.5rem 0;
 
     &__icon {

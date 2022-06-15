@@ -1,11 +1,14 @@
+// Import Files
+@use "../utils/variables" as vars;
+
 // Home explore button
 @mixin btn {
   display: inline-block;
   color: white;
-  background: linear-gradient(350deg, $color-primary, $color-secondary);
+  background: linear-gradient(350deg, vars.$color-primary, vars.$color-secondary);
   border: 0;
   border-radius: 30px;
-  box-shadow: 0.25rem 0.25rem 10px $color-grey2;
+  box-shadow: 0.25rem 0.25rem 10px vars.$color-grey2;
   font-size: 1.1rem;
   padding-top: 1em;
   width: 240px;
@@ -15,7 +18,7 @@
   transition-duration: 0.25s;
 
   &:hover {
-    box-shadow: 0.25rem 0.25rem 10px $color-grey;
+    box-shadow: 0.25rem 0.25rem 10px vars.$color-grey;
   }
 
   a {
