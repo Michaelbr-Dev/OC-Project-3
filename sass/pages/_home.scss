@@ -1,8 +1,8 @@
-// import files
+// Import files
 @use "../utils/variables" as vars;
 @use "../base/typography" as typo;
 @use "../utils/mixins";
-@use "../utils/responsive"as mq;
+@use "../utils/responsive" as mq;
 @use "../components/button" as btn;
 @use "../components/cards";
 
@@ -14,15 +14,16 @@
 
   &__location {
     padding: 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 900;
     &__icon {
       margin-right: 15px;
     }
 
     &__input {
-      width: 50%;
-      font-size: 1.2rem;
+      width: 40%;
+      font-size: 1rem;
+      font-weight: 600;
       border: none;
       background-color: transparent;
 
@@ -42,14 +43,15 @@
 
   &__content {
     &__text {
-      padding: 2.5rem 0;
+      font-family: typo.$font-txt;
+      padding: 2rem 0;
       background-color: vars.$color-grey3;
       text-align: center;
 
       & h1 {
-        width: 80%;
+        width: 75%;
         margin: 0 auto;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 900;
       }
 
@@ -58,7 +60,7 @@
         margin: 0 auto;
         padding-top: 1rem;
         font-size: 1.1rem;
-        font-weight: 500;
+        font-weight: 300;
       }
     }
 
@@ -70,26 +72,60 @@
 
 /* Working */
 .working {
-  padding-left: 1rem;
+  font-family: typo.$font-txt;
 
   @include mq.for-phone-only {
     @include mixins.flex(column, nowrap, center, center);
   }
 
   &__title {
-    padding-top: 2rem;
+    padding: 2.5rem 0 0 2.5rem;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
   }
 
   &__btn {
     @include mq.for-phone-only;
-    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: number;
 
     &__content {
-      @include mixins.flex(row, nowrap, space-between, center);
-      padding: 0.5rem 0;
+      @include mixins.flex(row, nowrap, flex-start, center);
+      @include btn.btn-work;
+      font-weight: 500;
+
+      &:before {
+        @include mixins.flex(row, nowrap, center, center);
+        counter-increment: number 1;
+        content: counter(number) "";
+        color: white;
+        text-align: center;
+        background-color: vars.$color-primary;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 0.75rem;
+        position: absolute;
+        left: -0.75rem;
+      }
+
+      i {
+        color: vars.$color-icon;
+        padding: 0 0.7rem;
+        width: 1.5rem;
+        text-align: center;
+
+      }
+      
+      &:hover {
+        background-color: lighten(vars.$color-primary, 35%);
+        
+        i {
+          color: vars.$color-primary;          
+        }
+      }
     }
   }
 }

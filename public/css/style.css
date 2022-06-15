@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+/* reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -35,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  box-sizing: border-box;
 }
 
 ol, ul {
@@ -60,12 +56,12 @@ table {
 .header__logo {
   text-align: center;
   font-family: "Shrikhand", cursive;
-  font-weight: 900;
+  font-weight: 500;
 }
 @media (max-width: 599px) {
   .header__logo {
-    margin: 1.2rem 0;
-    font-size: 2.5rem;
+    margin: 1rem 0;
+    font-size: 1.9rem;
   }
 }
 .header__logo a {
@@ -119,6 +115,8 @@ table {
   text-decoration: none;
 }
 
+/* button of explore section */
+/* Button of working section */
 /* Exploration */
 .explore {
   font-family: "Roboto", sans-serif;
@@ -127,15 +125,16 @@ table {
 }
 .explore__location {
   padding: 1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 900;
 }
 .explore__location__icon {
   margin-right: 15px;
 }
 .explore__location__input {
-  width: 50%;
-  font-size: 1.2rem;
+  width: 40%;
+  font-size: 1rem;
+  font-weight: 600;
   border: none;
   background-color: transparent;
 }
@@ -155,14 +154,15 @@ table {
   }
 }
 .explore__content__text {
-  padding: 2.5rem 0;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem 0;
   background-color: #F6F6F6;
   text-align: center;
 }
 .explore__content__text h1 {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 900;
 }
 .explore__content__text h2 {
@@ -170,25 +170,27 @@ table {
   margin: 0 auto;
   padding-top: 1rem;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 300;
 }
 .explore__content__btn {
   display: inline-block;
   color: white;
+  font-size: 1rem;
+  font-weight: 400;
   background: linear-gradient(350deg, #9356DC, #FF79DA);
+  box-shadow: 0.25rem 0.25rem 10px #EAEAEA;
+  margin: 2.5rem 0;
+  padding-top: 1.5em;
+  width: 220px;
+  height: 30px;
   border: 0;
   border-radius: 30px;
-  box-shadow: 0.25rem 0.25rem 10px #EAEAEA;
-  font-size: 1.1rem;
-  padding-top: 1em;
-  width: 240px;
-  height: 40px;
-  margin: 2rem 0;
   cursor: pointer;
   transition-duration: 0.25s;
 }
 .explore__content__btn:hover {
-  box-shadow: 0.25rem 0.25rem 10px #CECECE;
+  background: linear-gradient(350deg, #a16be0, #ff93e1);
+  box-shadow: 0.25rem 0.25rem 10px #a8a8a8;
 }
 .explore__content__btn a {
   text-decoration: none;
@@ -197,7 +199,7 @@ table {
 
 /* Working */
 .working {
-  padding-left: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 @media (max-width: 599px) {
   .working {
@@ -209,21 +211,59 @@ table {
   }
 }
 .working__title {
-  padding-top: 2rem;
+  padding: 2.5rem 0 0 2.5rem;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 .working__btn {
-  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: number;
 }
 .working__btn__content {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  background-color: #F6F6F6;
+  box-shadow: 0.25rem 0.25rem 0.5rem #b5b5b5;
+  border-radius: 1.25rem;
+  position: relative;
+  font-weight: 500;
+}
+.working__btn__content:before {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  counter-increment: number 1;
+  content: counter(number) "";
+  color: white;
+  text-align: center;
+  background-color: #9356DC;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  position: absolute;
+  left: -0.75rem;
+}
+.working__btn__content i {
+  color: #7E7E7E;
+  padding: 0 0.7rem;
+  width: 1.5rem;
+  text-align: center;
+}
+.working__btn__content:hover {
+  background-color: #f2eafb;
+}
+.working__btn__content:hover i {
+  color: #9356DC;
 }
 
 /* Restaurants */
