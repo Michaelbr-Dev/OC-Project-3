@@ -2,6 +2,7 @@
 // It is intended to ONLY @import other files.
 
 // 1 - UTILS
+@import './utils/reset';
 @import './utils/variables';
 @import './utils/responsive';
 @import './utils/mixins';
@@ -10,7 +11,6 @@
 // N/A
 
 // 3 - BASE
-@import './base/reset';
 @import './base/typography';
 @import './base/animations';
 

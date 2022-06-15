@@ -229,24 +229,6 @@ table {
   align-items: center;
   padding: 0.5rem 0;
 }
-.working__btn__content__number {
-  background-color: #9356DC;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  font-size: 0.8rem;
-  color: white;
-  font-weight: 500;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #9356DC;
-  border-radius: 10px;
-  left: -7px;
-}
-.working__btn__content__icon {
-  margin: 1.5rem;
-  color: #7E7E7E;
-}
 
 /* Restaurants */
 .restaurants {
