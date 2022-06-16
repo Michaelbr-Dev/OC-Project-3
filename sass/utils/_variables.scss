@@ -1,3 +1,8 @@
+// Import Fonts
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
 // Colors
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -19,3 +24,6 @@ $breakpoint:(
     desktop-up: 1800px
 );
 
+// Typographie
+$font-logo: "Shrikhand", cursive;
+$font-txt: "Roboto", sans-serif;

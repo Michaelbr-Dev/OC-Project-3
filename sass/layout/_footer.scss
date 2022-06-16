@@ -4,7 +4,6 @@
 
 // Import files
 @use "../utils/responsive" as mq;
-@use "../base/typography" as typo;
 @use "../utils/variables" as vars;
 @use "../utils/mixins";
 
@@ -19,7 +18,7 @@
   padding: 1.5rem;
 
   &__logo {
-    font-family: typo.$font-logo;
+    font-family: vars.$font-logo;
     font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 1rem;

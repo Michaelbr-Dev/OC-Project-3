@@ -1,14 +1,14 @@
 // Import files
 @use "../utils/variables" as vars;
-@use "../base/typography" as typo;
 @use "../utils/mixins";
 @use "../utils/responsive" as mq;
 @use "../components/button" as btn;
 @use "../components/cards";
 
 /* Exploration */
+
 .explore {
-  font-family: typo.$font-txt;
+  font-family: vars.$font-txt;
   border-top: 3px solid vars.$color-grey;
   background-color: vars.$color-grey2;
 
@@ -43,7 +43,7 @@
 
   &__content {
     &__text {
-      font-family: typo.$font-txt;
+      font-family: vars.$font-txt;
       padding: 2rem 0;
       background-color: vars.$color-grey3;
       text-align: center;
@@ -67,12 +67,16 @@
     &__btn {
       @include btn.btn;
     }
+
+    & a {
+      @include btn.btn;
+    }
   }
 }
 
 /* Working */
 .working {
-  font-family: typo.$font-txt;
+  font-family: vars.$font-txt;
 
   @include mq.for-phone-only {
     @include mixins.flex(column, nowrap, center, center);
