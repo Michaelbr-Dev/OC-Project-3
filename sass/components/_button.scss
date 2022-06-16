@@ -9,30 +9,33 @@
   font-weight: 400;
   background: linear-gradient(350deg, vars.$color-primary, vars.$color-secondary);
   box-shadow: 0.25rem 0.25rem 10px vars.$color-grey2;
-  margin: 2.5rem 0;
+  margin: 2rem 0;
   padding-top: 1em;
   width: 220px;
   height: 30px;
   border: 0;
   border-radius: 30px;
   cursor: pointer;
-  transition-duration: 0.25s;
-
+  
   &:hover {
     background: linear-gradient(350deg, lighten(vars.$color-primary, 5%), lighten(vars.$color-secondary, 5%));
     box-shadow: 0.25rem 0.25rem 10px darken(vars.$color-grey,15%);
+    color: white;
   }
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: white;
+    &:active{
+      color: white;
+    }
   }
 }
 
 /* Button of working section */
 @mixin btn-work {
   padding: 1.5rem;
-  margin: 1rem 0 1rem 0.75rem;
+  margin: 1rem 0 1.7rem 0.75rem;
   background-color: vars.$color-grey3;
   box-shadow: 0.25rem 0.25rem 0.5rem darken(vars.$color-grey, 10%);
   border-radius: 1.25rem;

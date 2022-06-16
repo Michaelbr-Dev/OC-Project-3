@@ -13,8 +13,8 @@
   background-color: vars.$color-grey2;
 
   &__location {
-    padding: 1rem;
-    font-size: 1rem;
+    padding: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 900;
     &__icon {
       margin-right: 15px;
@@ -44,15 +44,15 @@
   &__content {
     &__text {
       font-family: vars.$font-txt;
-      padding: 2rem 0;
+      padding: 2.1rem 0;
       background-color: vars.$color-grey3;
       text-align: center;
 
       & h1 {
         width: 75%;
         margin: 0 auto;
-        font-size: 1.5rem;
-        font-weight: 900;
+        font-size: 1.6rem;
+        font-weight: 600;
       }
 
       & h2 {
@@ -68,9 +68,6 @@
       @include btn.btn;
     }
 
-    & a {
-      @include btn.btn;
-    }
   }
 }
 
@@ -83,14 +80,15 @@
   }
 
   &__title {
-    padding: 2.5rem 0 0 2.5rem;
+    padding: 1rem 0 0 2.5rem;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 600;
   }
 
   &__btn {
     @include mq.for-phone-only;
+    width: 90%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -137,22 +135,20 @@
 /* Restaurants */
 .restaurants {
   @include mq.for-phone-only;
-  padding-left: 1rem;
   background-color: vars.$color-grey3;
-
+  
   &__title {
-    padding-top: 2rem;
+    margin: 2.3rem 0 1rem 0;
+    padding: 2rem 0 0 1rem;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
   }
 
   &__card {
-    &__img {
-      img {
-        width: 100%;
-        height: auto;
-      }
+    @include mq.for-phone-only;
+    @include mixins.flex(column, nowrap, center, flex-start);
+    @include cards.card;
     }
+
   }
-}

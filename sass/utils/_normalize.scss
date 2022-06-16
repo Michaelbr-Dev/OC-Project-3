@@ -1,3 +1,6 @@
+// Import File
+@use "../utils/variables" as vars;
+
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -22,6 +25,7 @@ html {
 
 body {
   margin: 0;
+  font-family: vars.$font-txt;
 }
 
 /**

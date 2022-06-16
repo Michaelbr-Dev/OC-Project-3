@@ -14,7 +14,8 @@
     font-weight: 500;
 
     @include mq.for-phone-only {
-      margin: 1rem 0;
+      margin: 0.9rem 0;
+      padding-top: 0;
       font-size: 1.9rem;
     }
 
