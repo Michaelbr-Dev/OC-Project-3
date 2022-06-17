@@ -14,9 +14,9 @@
     font-weight: 500;
 
     @include mq.for-phone-only {
-      margin: 0.9rem 0;
+      margin: 1rem 0 0.3rem 0;
       padding-top: 0;
-      font-size: 1.9rem;
+      font-size: 1.8rem;
     }
 
     a {

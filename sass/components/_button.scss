@@ -9,12 +9,12 @@
   font-weight: 400;
   background: linear-gradient(350deg, vars.$color-primary, vars.$color-secondary);
   box-shadow: 0.25rem 0.25rem 10px vars.$color-grey2;
-  margin: 2rem 0;
-  padding-top: 1em;
+  margin-top: 2rem;
+  padding-top: 0.8rem;
   width: 220px;
-  height: 30px;
+  height: 50px;
   border: 0;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
   
   &:hover {
@@ -22,11 +22,16 @@
     box-shadow: 0.25rem 0.25rem 10px darken(vars.$color-grey,15%);
     color: white;
   }
-
+  
   a {
     text-decoration: none;
     color: white;
+
     &:active{
+      color: white;
+    }
+
+    &:visited {
       color: white;
     }
   }
@@ -41,4 +46,3 @@
   border-radius: 1.25rem;
   position: relative;
 }
-

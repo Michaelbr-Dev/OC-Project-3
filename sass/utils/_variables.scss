@@ -17,11 +17,11 @@ $footer-bg: #353535;
 
 // Media Queries
 $breakpoint:(
-    phone-only: 599px, 
-    tablet-portrait: 600px,
-    tablet-landscape: 900px,
+    phone-only: 576px, 
+    tablet-portrait: 768px,
+    tablet-landscape: 992px,
     desktop: 1200px,
-    desktop-up: 1800px
+    desktop-up: 1400px
 );
 
 // Typographie

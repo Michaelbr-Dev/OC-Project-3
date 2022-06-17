@@ -8,7 +8,6 @@
 /* Exploration */
 
 .explore {
-  font-family: vars.$font-txt;
   border-top: 3px solid vars.$color-grey;
   background-color: vars.$color-grey2;
 
@@ -43,7 +42,6 @@
 
   &__content {
     &__text {
-      font-family: vars.$font-txt;
       padding: 2.1rem 0;
       background-color: vars.$color-grey3;
       text-align: center;
@@ -73,8 +71,6 @@
 
 /* Working */
 .working {
-  font-family: vars.$font-txt;
-
   @include mq.for-phone-only {
     @include mixins.flex(column, nowrap, center, center);
   }
