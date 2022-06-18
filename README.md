@@ -7,5 +7,5 @@ Dynamisez une page web avec des animations CSS (ohmyfood)
 
 ## Technologies
 
-- [![Made-with-HTML](https://img.shields.io/badge/Made%20with-HTML-red)](https://developer.mozilla.org/fr/docs/Web/HTML)
-- [![Made-with-SASS](https://img.shields.io/badge/Made%20with-SASS-pink)](https://sass-lang.com/guide)
+- [![Made-with-HTML](https://img.shields.io/badge/Made%20with-HTML-e34c26)](https://developer.mozilla.org/fr/docs/Web/HTML)
+- [![Made-with-SASS](https://img.shields.io/badge/Made%20with-SASS-c6538c)](https://sass-lang.com/guide)
