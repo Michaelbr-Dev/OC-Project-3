@@ -1,0 +1,12 @@
+// Include Files
+@use "../utils/variables" as vars;
+
+@keyframes working-steps {
+     from{
+       background-color: vars.$color-primary;
+     }
+    to{
+       background-color: lighten(vars.$color-primary, 35%);
+    }
+    
+}

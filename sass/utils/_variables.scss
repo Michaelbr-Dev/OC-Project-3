@@ -1,6 +1,6 @@
 // Import Fonts
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 
 // Colors
@@ -8,7 +8,7 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-new: #008766;
-$color-grey: #CECECE;
+$color-grey: #CFCFCF;
 $color-grey2: #EAEAEA;
 $color-grey3: #F6F6F6;
 $color-icon: #7E7E7E;
@@ -27,3 +27,4 @@ $breakpoint:(
 // Typographie
 $font-logo: "Shrikhand", cursive;
 $font-txt: "Roboto", sans-serif;
+$dark-font: #353535;

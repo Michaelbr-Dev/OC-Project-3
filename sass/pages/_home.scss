@@ -4,147 +4,92 @@
 @use "../utils/responsive" as mq;
 @use "../components/button" as btn;
 @use "../components/cards";
+@use "../base/animations" as anim;
 
-/* Exploration */
-
+/* Explore section */
 .explore {
-  border-top: 3px solid vars.$color-grey;
-  background-color: vars.$color-grey2;
-
-  &__location {
-    padding: 0.9rem;
-    font-size: 1.1rem;
-    font-weight: 900;
-    &__icon {
-      margin-right: 15px;
-    }
-
-    &__input {
-      width: 40%;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      background-color: transparent;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    ::placeholder {
-      color: black;
-    }
-
-    @include mq.for-phone-only {
-      @include mixins.flex(row, wrap, center, center);
-    }
-  }
-
-  &__content {
-    &__text {
-      padding: 2.1rem 0;
-      background-color: vars.$color-grey3;
-      text-align: center;
-
-      & h1 {
-        width: 75%;
-        margin: 0 auto;
-        font-size: 1.6rem;
-        font-weight: 600;
-      }
-
-      & h2 {
-        width: 90%;
-        margin: 0 auto;
-        padding-top: 1rem;
-        font-size: 1.1rem;
-        font-weight: 300;
-      }
-    }
-
-    &__btn {
-      @include btn.btn;
-    }
-
-  }
-}
-
-/* Working */
-.working {
   @include mq.for-phone-only {
-    @include mixins.flex(column, nowrap, center, center);
-  }
+    height: 335px;
+    background-color: vars.$color-grey3;
 
-  &__title {
-    padding: 1rem 0 0 2.5rem;
-    width: 100%;
-    font-size: 1.3rem;
-    font-weight: 600;
-  }
+    &__location {
+      background-color: vars.$color-grey2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0.8rem 0 0.625rem 5.1rem;
 
-  &__btn {
-    @include mq.for-phone-only;
-    width: 90%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: number;
+      &__icon {
+        font-size: 1rem;
+        margin-right: 15px;
+      }
 
-    &__content {
-      @include mixins.flex(row, nowrap, flex-start, center);
-      @include btn.btn-work;
+      &__input {
+        font-family: vars.$font-txt;
+        font-size: 1.1rem;
+        font-weight: 500;
+        border: none;
+        background-color: vars.$color-grey2;
+      }
+    }
+
+    &__content__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__content__text h1 {
+      width: 80%;
+      font-family: vars.$font-txt;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 2.65rem 0 0 3.8rem;
+      background-color: vars.$color-grey3;
+    }
+
+    &__content__text h2 {
+      width: 100%;
+      font-family: vars.$font-txt;
+      font-size: 1.125rem;
+      font-weight: 300;
+      text-align: center;
+      padding: 0.7rem 0 0 0.5rem;
+      background-color: vars.$color-grey3;
+    }
+
+    &__content__btn {
+      display: inline-block;
+      padding-top: 2.8rem;
+      text-align: center;
+    }
+    
+    &__content__btn a {
+      padding: 0.938rem 1.375rem;
+      font-size: 1rem;
       font-weight: 500;
+      color: #fff;
+      background: linear-gradient(
+        0deg,
+        vars.$color-primary,
+        vars.$color-secondary
+      );
+      border-radius: 1.563rem;
+      text-decoration: none;
+      box-shadow: 5px 5px 15px #bbb;
+    }
 
-      &:before {
-        @include mixins.flex(row, nowrap, center, center);
-        counter-increment: number 1;
-        content: counter(number) "";
-        color: white;
-        text-align: center;
-        background-color: vars.$color-primary;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 0.75rem;
-        position: absolute;
-        left: -0.75rem;
-      }
-
-      i {
-        color: vars.$color-icon;
-        padding: 0 0.7rem;
-        width: 1.5rem;
-        text-align: center;
-
-      }
-      
-      &:hover {
-        background-color: lighten(vars.$color-primary, 35%);
-        
-        i {
-          color: vars.$color-primary;          
-        }
-      }
+    &__content__btn a:hover {
+      background: linear-gradient(
+        0deg,
+        lighten(vars.$color-primary, 5%),
+        lighten(vars.$color-secondary, 5%)
+      );
+      box-shadow: 5px 5px 10px rgb(65, 65, 65);
     }
   }
 }
 
-/* Restaurants */
-.restaurants {
-  @include mq.for-phone-only;
-  background-color: vars.$color-grey3;
-  
-  &__title {
-    margin: 2.3rem 0 1rem 0;
-    padding: 2rem 0 0 1rem;
-    width: 100%;
-    font-size: 1.3rem;
-    font-weight: 600;
-  }
-
-  &__card {
-    @include mq.for-phone-only;
-    @include mixins.flex(column, nowrap, center, flex-start);
-    @include cards.card;
-    }
-
-  }
+/* Working section */
