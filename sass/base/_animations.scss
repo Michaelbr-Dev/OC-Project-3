@@ -1,6 +1,29 @@
 // Include Files
 @use "../utils/variables" as vars;
 
+// loader animation
+@keyframes animate-loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-out {
+  0% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 @keyframes working-steps {
      from{
        background-color: vars.$color-primary;
