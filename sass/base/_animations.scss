@@ -11,11 +11,12 @@
   }
 }
 
+// Fade out loader
 @keyframes animate-out {
   0% {
     opacity: 1;
   }
-  85% {
+  50% {
     opacity: 1;
   }
   100% {
