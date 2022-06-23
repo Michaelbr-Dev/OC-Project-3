@@ -3,47 +3,55 @@
 // -----------------------------------------------------------------------------
 
 // Import files
-@use "../utils/responsive" as mq;
-@use "../utils/variables" as vars;
-@use "../utils/mixins";
-
+@use "../utils/responsive" as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 /* Footer */
 .footer {
-  @include mq.for-phone-only {
-    @include mixins.flex(column, nowrap, space-around, flex-start);
-  }
-  background-color: vars.$footer-bg;
-  color: white;
-  padding: 1.5rem;
+  background-color: $footer-bg;
 
-  &__logo {
-    font-family: vars.$font-logo;
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
+  @include for-phone-only {
+    @include flex(column, nowrap, space-around, flex-start);
+    width: 100%;
+    height: 12.313rem;
+    color: white;
+    padding: 1.5rem;
 
-  &__ul {
-    list-style-type: none;
-  }
-
-  &__liens {
-    @include mixins.flex(row, nowrap, flex-start);
-    margin: 0.5rem 0;
-
-    &__icon {
-      width: 1.2rem;
-      margin-right: 0.5rem;
+    &__logo {
+      font-family: $font-logo;
+      font-size: 1.125rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      background-color: $footer-bg;
     }
 
-    &__titre {
-      font-weight: 500;
+    &__ul {
+      list-style-type: none;
+      background-color: $footer-bg;
     }
-  }
 
-  a {
-    color: inherit;
-    text-decoration: none;
+    &__liens {
+      @include flex(row, nowrap, flex-start);
+      margin: 0.5rem 0;
+      background-color: $footer-bg;
+
+      &__icon {
+        font-size: 0.9rem;
+        width: 1.2rem;
+        margin-right: 0.2rem;
+      }
+
+      &__titre {
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: $footer-bg;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 }

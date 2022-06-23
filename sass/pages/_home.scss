@@ -8,6 +8,8 @@
 
 /* Explore section */
 .explore {
+  position: relative;
+  z-index: 0;
   @include for-phone-only {
     height: 20.938rem;
     background-color: $color-grey3;
@@ -83,13 +85,15 @@
         lighten($color-primary, 5%),
         lighten($color-secondary, 5%)
       );
-      box-shadow: 5px 5px 10px rgb(65, 65, 65);
+      box-shadow: 5px 5px 10px #AAA;
     }
   }
 }
 
 /* Working section */
 .working {
+  position: relative;
+  z-index: 0;
   @include for-phone-only {
     width: 100%;
     height: 27.5rem;
@@ -147,7 +151,7 @@
           background-color: lighten($color-primary, 35%);
           transform: scale(1.05);
           transition: 0.2s ease-in-out;
-          box-shadow: 0 5px 10px #000;
+          box-shadow: 5px 5px 10px #AAA;
 
           & i {
             color: $color-primary;
@@ -160,77 +164,98 @@
 
 /* Restaurants section */
 .restaurants {
-  width: 100%;
-  @include flex(column, nowrap, center, flex-start);
-  background-color: #F6F6F6;
-
-  &__title h3{
-    margin-top: 3.5rem;
-    margin-left: 1.3rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #000000;
-    background-color: #F6F6F6;
-  }
-
-  &__cards {
+  @include for-phone-only {
     width: 100%;
+    height: 76.625rem;
     @include flex(column, nowrap, center, flex-start);
-  }
+    background-color: #f6f6f6;
 
-  &__card {
-    width: 20.938rem;
-    margin: 1.5rem auto 1rem;
-    background-color: #fff;
-    border-radius: 1.25rem;
-    box-shadow: 5px 5px 10px $color-grey;
-    text-decoration: none;
-    color: #000;
-
-    &:hover {
-      transform: scale(1.05);
-      transition: 0.2s ease-in-out;
+    &__title h3 {
+      margin-top: -0.6rem;
+      margin-left: 1.3rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #000000;
+      background-color: #f6f6f6;
     }
 
-    &__img {
-      position: relative;
-    }
-
-    &__img img {
+    &__cards {
       width: 100%;
-      height: 10.875rem;
-      border-radius: 1.25rem 1.25rem 0 0;
-      object-fit: cover;
+      @include flex(column, nowrap, center, flex-start);
     }
 
-    &--new {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
+    &__card {
+      width: 20.938rem;
+      height: 15.688rem;
+      margin: 1.5rem auto -0.4rem;
+      background-color: #fff;
+      border-radius: 1.25rem;
+      box-shadow: 5px 5px 10px $color-grey;
+      text-decoration: none;
+      color: #000;
 
-    &--new p {
-      display: inline-block;
-      margin: 0;
-      padding: 0.4rem;
-      background-color: $color-tertiary;
-      color: $color-new;
-      font-weight: 300;
-      border-radius: 3px;
-    }
-
-    &__content__text {
-
-      &__name {
-        font-size: 1.1rem;
-        font-weight: 300;
-        margin: 1.2rem;
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+        box-shadow: 5px 5px 10px #AAA;
       }
 
-      &__location {
-        font-size: 1.063rem;
-        font-weight: 100;
-        margin: 0.5rem 0 0 1.2rem;
+      &__img {
+        position: relative;
+      }
+
+      &__img img {
+        width: 100%;
+        height: 10.875rem;
+        border-radius: 0.938rem 0.938rem 0 0;
+        object-fit: cover;
+      }
+
+      &--new {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.9rem;
+      }
+
+      &--new p {
+        display: inline-block;
+        margin: 0;
+        padding: 0.4rem;
+        background-color: $color-tertiary;
+        color: $color-new;
+        font-weight: 500;
+        border-radius: 3px;
+      }
+
+      &__content {
+        position: relative;
+
+        &__icon {
+          position: absolute;
+          left: 18.1rem;
+          bottom: 0.1rem;
+          font-size: 1.313rem;
+
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+      }
+
+      &__content__text {
+        @include flex(column, nowrap, center, flex-start);
+
+        &__name {
+          font-size: 1.125rem;
+          font-weight: bold;
+          margin: 0.7rem 0.8rem;
+        }
+
+        &__location {
+          font-size: 1.063rem;
+          font-weight: 100;
+          margin: -0.7rem 0.8rem;
+        }
       }
     }
   }
