@@ -117,7 +117,7 @@ th {
 }
 /* Preloader */
 .preloader {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background: #F1F1F1;
@@ -357,13 +357,15 @@ th {
     counter-increment: number 1;
     content: counter(number) "";
     color: white;
-    text-align: center;
     background-color: #9356DC;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 0.75rem;
     position: absolute;
     left: -0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .working__btn__content i {
     color: #7E7E7E;
