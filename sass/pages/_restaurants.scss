@@ -36,6 +36,7 @@
   &__title {
     font-family: $font-logo;
     font-size: 1.75rem;
+    background-color: $color-grey3;
   }
 
   &__icon {
@@ -83,8 +84,8 @@
   box-shadow: 0.25rem 0.25rem 1rem lighten($color-icon, 25%);
   overflow: hidden;
   cursor: pointer;
-  animation: itemLoader 0.6s;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation: itemLoader 0.5s;
+  animation-timing-function: ease-in;
   animation-fill-mode: both;
   max-width: 90%;
   
@@ -172,8 +173,8 @@
   width: 100%;
   margin: 3rem auto 6rem;
   text-align: center;
-  animation: itemLoader 0.6s;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation: itemLoader 0.5s;
+  animation-timing-function: ease-in;
   animation-fill-mode: both;
 
   a {
