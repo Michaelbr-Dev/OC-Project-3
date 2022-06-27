@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./public/images/favicon/fav.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./public/images/favicon/favicon.png"
+      type="image/x-icon"
+    />
     <title>ohmyfood - A la fran&ccedil;aise</title>
-    <meta name="description" content="OhMyFood - un site 100% mobile qui répertorie les menus de restaurants gastronomiques.">
+    <meta
+      name="description"
+      content="OhMyFood - un site 100% mobile qui répertorie les menus de restaurants gastronomiques."
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css" />
 
     <!-- Fontawesome-->
-    <script src="https://kit.fontawesome.com/d203598731.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <!-- Bloc header -->
+    <script
+      src="https://kit.fontawesome.com/d203598731.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Bloc header -->
     <header>
       <div class="back">
-        <i class="fa-solid fa-arrow-left"></i>
+        <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>
       </div>
       <div class="header">
         <div class="header__logo">
@@ -26,36 +36,149 @@
         </div>
       </div>
     </header>
-    
-    <!-- Main container -->
-    <div class="main">
-      
-      <!-- Img -->
-      <div class="top__img">
-        <img src="./public/images/restaurants/a-la-francaise.jpg" alt="A la française">
-      </div>
-      
-      <!-- Menu -->
-      <div class="background">
-      
-        <!-- Restaurant name -->
-        <div class="rest_name">
-          <span class="rest__name__title">
-            À la française
-          </span>
-          <span class="rest__favorite">
-            <i class="fa-solid fa-heart"></i>
-          </span>
-        </div>
 
-        <!-- Entries -->
-        <div class="entries">
-          
-        </div>
-      </div>
+    <!-- background img-->
+    <img
+      src="./public/images/restaurants/a-la-francaise.jpg"
+      alt="A la française"
+      class="bg-img"
+    />
+
+    <!-- Main container -->
+    <div class="container menu">
+      <!-- restaurant header -->
+      <header class="menu__header">
+        <h2 class="menu__title">À la française</h2>
+        <div class="menu__icon"><i class="fa-solid fa-heart"></i></div>
+      </header>
     </div>
 
+    <!-- sub menus container -->
+    <div class="submenus">
+      <section class="submenu">
+        <h3 class="submenu__title">Entrées</h3>
+        <section class="delay-0 menuItem">
+          <header class="menuItem__header">
+            <span class="menuItem__title">Tartare de poulpe acidulé</span>
+            <span class="menuItem__description">Aux zestes d'orange</span>
+          </header>
+          <div class="menuItem__price">25€</div>
+          <div class="menuItem__checked">
+            <div class="menuItem__spinIcon">
+              <i class="fa-solid fa-check menuItem__Icon"></i>
+            </div>
+          </div>
+        </section>
+        <section class="delay-1 menuItem">
+          <header class="menuItem__header">
+            <span class="menuItem__title">Velouté de légumes d'antan</span>
+            <span class="menuItem__description">Carotte, panais, topinambour</span>
+          </header>
+          <div class="menuItem__price">35€</div>
+          <div class="menuItem__checked">
+            <div class="menuItem__spinIcon">
+              <i class="fa-solid fa-check menuItem__Icon"></i>
+            </div>
+          </div>
+        </section>
+        <section class="delay-2 menuItem">
+          <header class="menuItem__header">
+            <span class="menuItem__title">Soupe à l'oignon</span>
+            <span class="menuItem__description">Revisitée</span>
+          </header>
+          <div class="menuItem__price">20€</div>
+          <div class="menuItem__checked">
+            <div class="menuItem__spinIcon">
+              <i class="fa-solid fa-check menuItem__Icon"></i>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="submenu">
+        <h3 class="submenu__title">Plats</h3>
+        <section class="delay-3 menuItem">
+          <header class="menuItem__header">
+            <span class="menuItem__title">Coquilles Saint-Jacques</span>
+            <span class="menuItem__description">Accompagnées d'une purée de panais</span>
+          </header>
+          <div class="menuItem__price">40€</div>
+          <div class="menuItem__checked">
+            <div class="menuItem__spinIcon">
+              <i class="fa-solid fa-check menuItem__Icon"></i>
+            </div>
+          </div>
+        </section>
+        <section class="delay-4 menuItem">
+          <header class="menuItem__header">
+            <span class="menuItem__title">Magret de canard</span>
+            <span class="menuItem__description">Et parmentier de pommes de terres</span>
+          </header>
+          <div class="menuItem__price">35€</div>
+          <div class="menuItem__checked">
+            <div class="menuItem__spinIcon">
+              <i class="fa-solid fa-check menuItem__Icon"></i>
+            </div>
+          </div>
+        </section>
+        <section class="delay-5 menuItem">
+          <header class="menuItem__header">
+            <span class="menuItem__title">Pigeonneau d’Ille-et-Vilaine</span>
+            <span class="menuItem__description">Sur son lit de gnocchis aux légumes</span>
+          </header>
+          <div class="menuItem__price">44€</div>
+          <div class="menuItem__checked">
+            <div class="menuItem__spinIcon">
+              <i class="fa-solid fa-check menuItem__Icon"></i>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="submenu">
+        <h3 class="submenu__title">Desserts</h3>
+        <section class="delay-6 menuItem">
+          <header class="menuItem__header">
+            <span class="menuItem__title">Pétales de violettes glacés</span>
+            <span class="menuItem__description">Et purée de noisettes</span>
+          </header>
+          <div class="menuItem__price">18€</div>
+          <div class="menuItem__checked">
+            <div class="menuItem__spinIcon">
+              <i class="fa-solid fa-check menuItem__Icon"></i>
+            </div>
+          </div>
+        </section>
+        <section class="delay-7 menuItem">
+          <header class="menuItem__header">
+            <span class="menuItem__title">Fondant au chocolat</span>
+            <span class="menuItem__description">Revisité</span>
+          </header>
+          <div class="menuItem__price">22€</div>
+          <div class="menuItem__checked">
+            <div class="menuItem__spinIcon">
+              <i class="fa-solid fa-check menuItem__Icon"></i>
+            </div>
+          </div>
+        </section>
+        <section class="delay-8 menuItem">
+          <header class="menuItem__header">
+            <span class="menuItem__title">Millefeuille croustillant</span>
+            <span class="menuItem__description">Myrtilles et pâte d’amande</span>
+          </header>
+          <div class="menuItem__price">23€</div>
+          <div class="menuItem__checked">
+            <div class="menuItem__spinIcon">
+              <i class="fa-solid fa-check menuItem__Icon"></i>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
 
+    <!-- order button -->
+    <div class="delay-9 order__btn">
+      <a href="#">Commander</a>
+    </div>
+    
     <!-- Bloc footer -->
     <footer class="footer">
       <div class="footer__content">
@@ -92,5 +215,5 @@
         </ul>
       </div>
     </footer>
-</body>
+  </body>
 </html>

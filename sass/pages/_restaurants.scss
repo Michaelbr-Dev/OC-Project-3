@@ -6,29 +6,196 @@
 @use "../components/cards" as *;
 @use "../base/animations" as *;
 
-.main {
-  width: 100%;
-  @include flex(column, nowrap, center, flex-start);
-  position: relative;
-}
-
-.top__img{
+.bg-img {
   width: 100%;
   height: 15.625rem;
+  max-height: 32rem;
   object-fit: cover;
 }
 
-.background {
-  width: 100%;
-  height: 74.813rem;
-  background-color: $color-grey3;
-  position: absolute;
-  top: 13.6rem;
-  border-radius: 2.5rem 2.5rem 0 0;
+.container {
+    margin: auto;
+    position: relative;
 }
 
-.rest__name {
-  @include flex(row, nowrap, space-between, center);
+.menu {
   width: 100%;
+  margin-top: -2rem;
+  border-radius: 2.5rem 2.5rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+
+  &__header {
+    padding: 1.75rem 2rem 0 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: $font-logo;
+    font-size: 1.75rem;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    @include heart;
+  }
+}
+
+.submenus {
+  background-color: $color-grey3;
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu {
+  width: 100%;
+  background-color: $color-grey3;
+  position: relative;
+
+  &__title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 2rem 0 0 1.3rem;
+    background-color: $color-grey3;
+
+    &::after {
+      content: "";
+      width: 2.5rem;
+      height: 3px;
+      background-color: $color-tertiary;
+      position: absolute;
+      top: 3.5rem;
+      left: 1.3rem;
+    }
+  }
+}
+
+.menuItem {
+  display: flex;
+  background-color: #fff;
+  margin: 1.5rem auto;
+  padding: 0.5rem;
+  border-radius: 0.938rem;
+  box-shadow: 0.25rem 0.25rem 1rem lighten($color-icon, 25%);
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemLoader 0.6s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation-fill-mode: both;
+  max-width: 90%;
   
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description {
+    width: 100%;
+    margin: 0;
+    padding-top: 0.1rem;
+    font-size: 0.938rem;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__price {
+    font-weight: 900;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 0.5rem 0 0.5rem;
+  }
+
+  &__checked {
+    background-color: $color-tertiary;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+  }
+  
+  &:hover &__checked {
+    margin-right: -1rem;
+  }
+
+  &__spinIcon {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8rem;
+    transform: rotate(-180deg);
+    transition-duration: 0.5s;
+  }
+
+  &:hover &__spinIcon {
+    transform: rotate(0);
+  }
+
+  &__Icon {
+    color: $color-tertiary;
+  }
+
+  &:hover {
+    box-shadow: 0.25rem 0.25rem 1rem $color-icon;
+  }
+  
+}
+
+.order__btn {
+  width: 100%;
+  margin: 3rem auto 6rem;
+  text-align: center;
+  animation: itemLoader 0.6s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation-fill-mode: both;
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+    padding:1.063rem 3rem;
+    background: linear-gradient(170deg, #FF79DA, #9356DC);
+    border-radius: 1.563rem;
+    box-shadow: 0.25rem 0.25rem 1rem lighten($color-icon, 25%);
+    
+    &:visited {
+      color: #FFF;
+    }
+    
+    &:hover {
+      box-shadow: 0.25rem 0.25rem 1rem $color-icon;
+    }
+  }
+}
+
+@for $i from 0 through 9 {
+  .delay-#{$i} {
+    animation-delay: #{$i/10}s;
+  }
 }

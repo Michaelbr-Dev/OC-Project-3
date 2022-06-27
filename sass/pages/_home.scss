@@ -73,19 +73,20 @@
       font-size: 1rem;
       font-weight: 500;
       color: #fff;
-      background: linear-gradient(0deg, $color-primary, $color-secondary);
+      background: linear-gradient(170deg, $color-secondary, $color-primary);
       border-radius: 1.563rem;
       text-decoration: none;
-      box-shadow: 5px 5px 15px #bbb;
+      box-shadow: 5px 5px 15px lighten($color-icon,25%);
     }
 
     &__content__btn a:hover {
       background: linear-gradient(
-        0deg,
-        lighten($color-primary, 5%),
-        lighten($color-secondary, 5%)
+        170deg, 
+        lighten($color-secondary, 5%),
+        lighten($color-primary, 5%)
+        
       );
-      box-shadow: 5px 5px 10px #AAA;
+      box-shadow: 5px 5px 10px $color-icon;
     }
   }
 }
@@ -117,49 +118,7 @@
       list-style: none;
       counter-reset: number;
 
-      &__content {
-        @include flex(row, nowrap, flex-start, center);
-        position: relative;
-        margin: 1.6rem auto;
-        width: 20.2rem;
-        height: 4.688rem;
-        font-weight: 500;
-        background-color: #f6f6f6;
-        border-radius: 1.25rem;
-        box-shadow: 5px 5px 10px $color-grey;
-
-        &:before {
-          counter-increment: number 1;
-          content: counter(number) "";
-          color: white;
-          background-color: $color-primary;
-          width: 1.5rem;
-          height: 1.5rem;
-          border-radius: 0.75rem;
-          position: absolute;
-          left: -0.75rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        & i {
-          color: $color-icon;
-          padding: 0 1.6rem 0 2.5rem;
-          text-align: center;
-        }
-
-        &:hover {
-          background-color: lighten($color-primary, 35%);
-          transform: scale(1.05);
-          transition: 0.2s ease-in-out;
-          box-shadow: 5px 5px 10px #AAA;
-
-          & i {
-            color: $color-primary;
-          }
-        }
-      }
+      @include home-btn;
     }
   }
 }
@@ -185,89 +144,6 @@
       width: 100%;
       @include flex(column, nowrap, center, flex-start);
     }
-
-    &__card {
-      width: 20.938rem;
-      height: 15.688rem;
-      margin: 1.5rem auto -0.4rem;
-      background-color: #fff;
-      border-radius: 1.25rem;
-      box-shadow: 5px 5px 10px $color-grey;
-      text-decoration: none;
-      color: #000;
-
-      &:hover {
-        transform: scale(1.05);
-        transition: 0.2s ease-in-out;
-        box-shadow: 5px 5px 10px #AAA;
-      }
-
-      &__img {
-        position: relative;
-      }
-
-      &__img img {
-        width: 100%;
-        height: 10.875rem;
-        border-radius: 0.938rem 0.938rem 0 0;
-        object-fit: cover;
-      }
-
-      &--new {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.9rem;
-      }
-
-      &--new p {
-        display: inline-block;
-        margin: 0;
-        padding: 0.4rem;
-        background-color: $color-tertiary;
-        color: $color-new;
-        font-weight: 500;
-        border-radius: 3px;
-      }
-
-      &__content {
-        position: relative;
-
-        &__icon {
-          position: absolute;
-          left: 18.1rem;
-          bottom: 0.1rem;
-          font-size: 1.313rem;
-          padding: 0.3rem;
-          -webkit-text-fill-color: white;
-          -webkit-text-stroke-width: 2px;
-          -webkit-text-stroke-color: black;
-          cursor: pointer;
-
-          &:hover {
-            transition: 0.2s ease-in-out;
-            background-image: linear-gradient(0deg, $color-secondary, $color-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke-color: transparent;
-          }
-        }
-      }
-
-      &__content__text {
-        @include flex(column, nowrap, center, flex-start);
-
-        &__name {
-          font-size: 1.125rem;
-          font-weight: bold;
-          margin: 0.7rem 0.8rem;
-        }
-
-        &__location {
-          font-size: 1.063rem;
-          font-weight: 100;
-          margin: -0.7rem 0.8rem;
-        }
-      }
-    }
+    @include restaurant-card;
   }
 }

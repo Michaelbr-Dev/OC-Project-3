@@ -71,6 +71,15 @@ header {
   position: absolute;
   left: 1.375rem;
   font-size: 1.25rem;
+  z-index: 1;
+
+  a {
+    color: black;
+
+    &:visited {
+      color: black;
+    }
+  }
 }
 .header {
   @include for-phone-only {

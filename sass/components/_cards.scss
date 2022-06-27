@@ -1,0 +1,81 @@
+// Import Files
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../utils/responsive" as *;
+@use "../base/animations" as *;
+
+
+@mixin restaurant-card {
+  &__card {
+      width: 20.938rem;
+      height: 15.688rem;
+      margin: 1.5rem auto -0.4rem;
+      background-color: #fff;
+      border-radius: 1.25rem;
+      box-shadow: 5px 5px 10px lighten($color-icon, 25%);
+      text-decoration: none;
+      color: #000;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+        box-shadow: 5px 5px 10px $color-icon;
+      }
+
+      &__img {
+        position: relative;
+      }
+
+      &__img img {
+        width: 100%;
+        height: 10.875rem;
+        border-radius: 0.938rem 0.938rem 0 0;
+        object-fit: cover;
+      }
+
+      &--new {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.9rem;
+      }
+
+      &--new p {
+        display: inline-block;
+        margin: 0;
+        padding: 0.4rem;
+        background-color: $color-tertiary;
+        color: $color-new;
+        font-weight: 500;
+        border-radius: 3px;
+      }
+
+      &__content {
+        position: relative;
+
+        &__icon {
+          position: absolute;
+          right: 1.25rem;
+          bottom: 0;
+          font-size: 1.313rem;
+          padding: 0.313rem;
+          @include heart;
+        }
+      }
+
+      &__content__text {
+        @include flex(column, nowrap, center, flex-start);
+
+        &__name {
+          font-size: 1.125rem;
+          font-weight: bold;
+          margin: 0.7rem 0.8rem;
+        }
+
+        &__location {
+          font-size: 1.063rem;
+          font-weight: 100;
+          margin: -0.7rem 0.8rem;
+        }
+      }
+    }
+}
