@@ -10,48 +10,122 @@
 /* Footer */
 .footer {
   background-color: $footer-bg;
+  width: 100%;
+  height: 12.313rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  @include for-phone-only {
-    @include flex(column, nowrap, space-around, flex-start);
-    width: 100%;
-    height: 12.313rem;
-    color: white;
-    padding: 1.5rem;
-
-    &__logo {
-      font-family: $font-logo;
+  &__logo {
+    font-family: $font-logo;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    font-size: 1.875rem;
+    @include for-phone-only {
       font-size: 1.125rem;
       font-weight: 400;
-      margin-bottom: 1rem;
-      background-color: $footer-bg;
-    }
-
-    &__ul {
-      list-style-type: none;
-      background-color: $footer-bg;
-    }
-
-    &__liens {
-      @include flex(row, nowrap, flex-start);
-      margin: 0.5rem 0;
-      background-color: $footer-bg;
-
-      &__icon {
-        font-size: 0.9rem;
-        width: 1.2rem;
-        margin-right: 0.2rem;
-      }
-
-      &__titre {
-        font-size: 1rem;
-        font-weight: 500;
-        background-color: $footer-bg;
-      }
+      padding: 1.5rem 0 0.9rem 1.5rem;
     }
 
     a {
-      color: inherit;
+      color: $footer-font;
       text-decoration: none;
+
+      :hover {
+        text-decoration: none;
+      }
+
+      :visited {
+        color: $footer-font;
+      }
     }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: $footer-bg;
+    font-size: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    @include for-phone-only{
+      flex-direction: column;
+      padding-left: 1.5rem;
+      margin: 0;
+    }
+  }
+
+  &__links {
+    background-color: $footer-bg;
+    padding-bottom: 0.5rem;
+    
+    &--partners {
+      background-color: $footer-bg;
+      padding-bottom: 0.5rem;
+      
+      a {
+        color: $footer-font;
+        text-decoration: none;
+
+        &::before {
+          display: inline-block;
+          font-family:"FontAwesome";
+          color: $footer-font;
+          font-size: 0.8rem;
+          margin-right: 0.5rem;
+          content: "\f2e7";
+        }
+
+        :hover {
+          text-decoration: none;
+        }
+
+        :visited {
+          color: $footer-font;
+        }
+      }
+    }
+
+    &--suggest {
+      background-color: $footer-bg;
+      padding-bottom: 0.5rem;
+      
+      a {
+        color: $footer-font;
+        text-decoration: none;
+
+        &::before {
+          display: inline-block;
+          font-family:"FontAwesome";
+          color: $footer-font;
+          font-size: 0.8rem;
+          margin-right: 0.5rem;
+          @include for-phone-only{
+            margin-right: 0.2rem;
+          }
+          content: "\f4c4";
+        }
+
+        :hover {
+          text-decoration: none;
+        }
+
+        :visited {
+          color: $footer-font;
+        }
+      }
+    }
+    a {
+        color: $footer-font;
+        text-decoration: none;
+
+        :hover {
+          text-decoration: none;
+        }
+
+        :visited {
+          color: $footer-font;
+        }
+      }
   }
 }

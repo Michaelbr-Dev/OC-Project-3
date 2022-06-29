@@ -103,6 +103,7 @@ th {
   100% {
     opacity: 0;
     z-index: -1;
+    animation-fill-mode: forwards;
   }
 }
 @keyframes working-steps {
@@ -130,7 +131,7 @@ th {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: #F1F1F1;
+  background: #f1f1f1;
   z-index: 3;
   animation: animate-out 2.5s ease-in both;
 }
@@ -182,90 +183,151 @@ header {
   position: relative;
 }
 
-.back {
+.header {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 63px;
+}
+.header__logo {
+  padding: 0.875rem 0 0.563rem 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.875rem;
+  text-align: center;
+}
+.header__logo a {
+  text-decoration: none;
+}
+.header__logo a:visited {
+  color: black;
+}
+.header__logo.icon a {
+  text-decoration: none;
+}
+.header__logo.icon a::before {
+  display: inline-block;
   position: absolute;
-  left: 1.375rem;
-  font-size: 1.25rem;
-  z-index: 1;
+  font-family: "FontAwesome";
+  font-size: 1.375rem;
+  font-weight: bold;
+  text-align: left;
+  margin-left: -4em;
+  margin-top: 0.7rem;
+  content: "\f060";
 }
-.back a {
+.header__logo.icon a:visited {
   color: black;
-}
-.back a:visited {
-  color: black;
-}
-
-@media (max-width: 576px) {
-  .header {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    height: 63px;
-  }
-  .header__logo {
-    padding: 0.875rem 0 0.563rem 0;
-    font-family: "Shrikhand", cursive;
-    font-size: 1.875rem;
-    text-align: center;
-  }
-  .header__logo a {
-    text-decoration: none;
-  }
-  .header__logo a:visited {
-    color: black;
-  }
 }
 
 /* Footer */
 .footer {
   background-color: #353535;
+  width: 100%;
+  height: 12.313rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  font-size: 1.875rem;
 }
 @media (max-width: 576px) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 100%;
-    height: 12.313rem;
-    color: white;
-    padding: 1.5rem;
-  }
   .footer__logo {
-    font-family: "Shrikhand", cursive;
     font-size: 1.125rem;
     font-weight: 400;
-    margin-bottom: 1rem;
-    background-color: #353535;
+    padding: 1.5rem 0 0.9rem 1.5rem;
   }
-  .footer__ul {
-    list-style-type: none;
-    background-color: #353535;
+}
+.footer__logo a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer__logo a :hover {
+  text-decoration: none;
+}
+.footer__logo a :visited {
+  color: #FFFFFF;
+}
+.footer ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #353535;
+  font-size: 1rem;
+  width: 90%;
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+  .footer ul {
+    flex-direction: column;
+    padding-left: 1.5rem;
+    margin: 0;
   }
-  .footer__liens {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0.5rem 0;
-    background-color: #353535;
-  }
-  .footer__liens__icon {
-    font-size: 0.9rem;
-    width: 1.2rem;
+}
+.footer__links {
+  background-color: #353535;
+  padding-bottom: 0.5rem;
+}
+.footer__links--partners {
+  background-color: #353535;
+  padding-bottom: 0.5rem;
+}
+.footer__links--partners a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer__links--partners a::before {
+  display: inline-block;
+  font-family: "FontAwesome";
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  content: "\f2e7";
+}
+.footer__links--partners a :hover {
+  text-decoration: none;
+}
+.footer__links--partners a :visited {
+  color: #FFFFFF;
+}
+.footer__links--suggest {
+  background-color: #353535;
+  padding-bottom: 0.5rem;
+}
+.footer__links--suggest a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer__links--suggest a::before {
+  display: inline-block;
+  font-family: "FontAwesome";
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  content: "\f4c4";
+}
+@media (max-width: 576px) {
+  .footer__links--suggest a::before {
     margin-right: 0.2rem;
   }
-  .footer__liens__titre {
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: #353535;
-  }
-  .footer a {
-    color: inherit;
-    text-decoration: none;
-  }
+}
+.footer__links--suggest a :hover {
+  text-decoration: none;
+}
+.footer__links--suggest a :visited {
+  color: #FFFFFF;
+}
+.footer__links a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer__links a :hover {
+  text-decoration: none;
+}
+.footer__links a :visited {
+  color: #FFFFFF;
 }
 
 /* Working section button */
@@ -571,7 +633,12 @@ header {
 .submenus {
   background-color: #F6F6F6;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+@media (max-width: 576px) {
+  .submenus {
+    flex-direction: column;
+  }
 }
 
 .submenu {
@@ -739,6 +806,10 @@ header {
 
 .delay-9 {
   animation-delay: 0.9s;
+}
+
+.delay-10 {
+  animation-delay: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */

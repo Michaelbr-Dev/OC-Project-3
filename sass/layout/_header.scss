@@ -15,7 +15,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: #F1F1F1;
+  background: #f1f1f1;
   z-index: 3;
   animation: animate-out 2.5s ease-in both;
 }
@@ -25,7 +25,7 @@
   height: 10rem;
   position: absolute;
   top: calc((100vh / 2) - 5rem);
-  left: calc((100vw /2) - 5rem);
+  left: calc((100vw / 2) - 5rem);
   display: block;
   border-radius: 50%;
   border: 4px solid #f1f1f1;
@@ -59,7 +59,7 @@
   border-radius: 50%;
   box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.5),
     inset 10px 10px 10px rgba(0, 0, 0, 0.2);
-} 
+}
 
 /* Header */
 header {
@@ -67,39 +67,43 @@ header {
   position: relative;
 }
 
-.back {
-  position: absolute;
-  left: 1.375rem;
-  font-size: 1.25rem;
-  z-index: 1;
-
-  a {
-    color: black;
-
-    &:visited {
-      color: black;
-    }
-  }
-}
 .header {
-  @include for-phone-only {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    height: 63px;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 63px;
 
-    &__logo {
-      padding: 0.875rem 0 0.563rem 0;
-      font-family: $font-logo;
-      font-size: 1.875rem;
-      text-align: center;
+  &__logo {
+    padding: 0.875rem 0 0.563rem 0;
+    font-family: $font-logo;
+    font-size: 1.875rem;
+    text-align: center;
 
-      a {
-        text-decoration: none;
+    a {
+      text-decoration: none;
 
-        &:visited {
-          color: black;
-        }
+      &:visited {
+        color: black;
+      }
+    }
+
+    &.icon a {
+      text-decoration: none;
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        font-family: "FontAwesome";
+        font-size: 1.375rem;
+        font-weight: bold;
+        text-align: left;
+        margin-left: -4em;
+        margin-top: 0.7rem;
+        content: "\f060";
+      }
+
+      &:visited {
+        color: black;
       }
     }
   }

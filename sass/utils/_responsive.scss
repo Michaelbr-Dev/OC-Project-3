@@ -1,30 +1,39 @@
 // Import files
-@use "../utils/variables" as vars;
+@use "../utils/variables" as *;
 
 // Media Queries
 
+// Small devices (landscape phones, 576px and up)
 @mixin for-phone-only {
-  @media (max-width: map-get(vars.$breakpoint, phone-only)) {
+  @media (max-width: map-get($breakpoint, phone-only)) {
     @content;
   }
 }
+
+// Medium devices (tablets, 768px and up)
 @mixin for-tablet-portrait-up {
-  @media (min-width: map-get(vars.$breakpoint, tablet-portrait)) {
+  @media (max-width: map-get($breakpoint, tablet-portrait)) {
     @content;
   }
 }
+
+// Large devices (desktops, 992px and up)
 @mixin for-tablet-landscape-up {
-  @media (min-width: map-get(vars.$breakpoint, tablet-landscape)) {
+  @media (max-width: map-get($breakpoint, tablet-landscape)) {
     @content;
   }
 }
+
+// X-Large devices (large desktops, 1200px and up)
 @mixin for-desktop {
-  @media (min-width: map-get(vars.$breakpoint, desktop)) {
+  @media (max-width: map-get($breakpoint, desktop)) {
     @content;
   }
 }
+
+// XX-Large devices (larger desktops, 1400px and up)
 @mixin for-desktop-up {
-  @media (min-width: map-get(vars.$breakpoint, desktop-up)) {
+  @media (min-width: map-get($breakpoint, desktop-up)) {
     @content;
   }
 }
