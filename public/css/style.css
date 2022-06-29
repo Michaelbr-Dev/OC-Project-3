@@ -192,6 +192,7 @@ header {
 .header__logo {
   padding: 0.875rem 0 0.563rem 0;
   font-family: "Shrikhand", cursive;
+  color: black;
   font-size: 1.875rem;
   text-align: center;
 }
