@@ -32,15 +32,7 @@
   }
 }
 
-@keyframes working-steps {
-  from {
-    background-color: $color-primary;
-  }
-  to {
-    background-color: lighten($color-primary, 35%);
-  }
-}
-
+// Heart hover aninmation
 @mixin heart {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
@@ -56,6 +48,7 @@
   }
 }
 
+// Menu item animation
 @keyframes itemLoader {
   0% {
     opacity: 0;
@@ -63,7 +56,6 @@
   }
   50% {
     opacity: 0.5;
-    
   }
   100% {
     opacity: 1;

@@ -187,6 +187,7 @@
       @include flex(column, nowrap, center, flex-start);
     }
     @include media(for-tablet, for-desktop) {
+      width: 100%;
       margin-bottom: 3rem;
     }
   }

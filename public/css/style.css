@@ -106,14 +106,6 @@ th {
     animation-fill-mode: forwards;
   }
 }
-@keyframes working-steps {
-  from {
-    background-color: #9356DC;
-  }
-  to {
-    background-color: #f2eafb;
-  }
-}
 @keyframes itemLoader {
   0% {
     opacity: 0;
@@ -604,11 +596,13 @@ header {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .restaurants__cards {
+    width: 100%;
     margin-bottom: 3rem;
   }
 }
 @media (min-width: 1024px) {
   .restaurants__cards {
+    width: 100%;
     margin-bottom: 3rem;
   }
 }

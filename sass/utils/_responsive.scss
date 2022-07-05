@@ -10,7 +10,7 @@
   }
 }
 
-// Medium devices (tablets, between 768px and 1024px)
+// Medium devices (tablets, between 768px and 1023px)
 @mixin for-tablet {
   @media (min-width: map-get($breakpoint, tablet-min)) and (max-width: map-get($breakpoint, tablet-max)) {
     @content;
@@ -24,6 +24,7 @@
   }
 }
 
+// Mixin media to combine them in tags
 @mixin media($keys...) {
   @each $key in $keys {
     @if $key == for-phone {

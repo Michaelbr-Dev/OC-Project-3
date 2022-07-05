@@ -2,6 +2,7 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
 @use "../utils/responsive" as *;
+@use "../base/animations" as *;
 
 /* Working section button */
 @mixin home-btn {
@@ -15,6 +16,7 @@
     background-color: #f6f6f6;
     border-radius: 1.25rem;
     box-shadow: 5px 5px 10px lighten($color-icon, 25%);
+
     @include media(for-tablet) {
       width: 25%;
     }
