@@ -64,16 +64,16 @@
 /* Header */
 header {
   @include flex(row, nowrap, center, center);
-  position: relative;
 }
 
 .header {
-  position: relative;
   margin: 0;
   width: 100%;
   height: 63px;
 
   &__logo {
+    position: relative;
+    width: 100%;
     padding: 0.875rem 0 0.563rem 0;
     font-family: $font-logo;
     color: black;
@@ -94,12 +94,11 @@ header {
       &::before {
         display: inline-block;
         position: absolute;
+        top: 25px;
+        left: 25px;
         font-family: "FontAwesome";
         font-size: 1.375rem;
         font-weight: bold;
-        text-align: left;
-        margin-left: -4em;
-        margin-top: 0.7rem;
         content: "\f060";
       }
 

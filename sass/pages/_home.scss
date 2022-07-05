@@ -10,140 +10,191 @@
 .explore {
   position: relative;
   z-index: 0;
-  @include for-phone-only {
-    height: 20.938rem;
-    background-color: $color-grey3;
+  height: 20.938rem;
+  background-color: $color-grey3;
+  @include media(for-tablet, for-desktop) {
+    height: 17rem;
+  }
 
-    &__location {
-      background-color: $color-grey2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 0.8rem 0 0.625rem 5.1rem;
+  &__location {
+    background-color: $color-grey2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 0 0.625rem 5.1rem;
 
-      &__icon {
-        font-size: 1rem;
-        margin-right: 15px;
-      }
-
-      &__input {
-        font-family: $font-txt;
-        font-size: 1.1rem;
-        font-weight: 500;
-        border: none;
-        background-color: $color-grey2;
-      }
-    }
-
-    &__content__text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    &__content__text h1 {
-      width: 80%;
-      font-family: $font-txt;
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-align: center;
-      padding: 2.65rem 0 0 3.8rem;
-      background-color: $color-grey3;
-    }
-
-    &__content__text h2 {
-      width: 100%;
-      font-family: $font-txt;
-      font-size: 1.125rem;
-      font-weight: 300;
-      text-align: center;
-      padding: 0.7rem 0 0 0.5rem;
-      background-color: $color-grey3;
-    }
-
-    &__content__btn {
-      display: inline-block;
-      padding-top: 2.8rem;
-      text-align: center;
-    }
-
-    &__content__btn a {
-      padding: 0.938rem 1.375rem;
+    &__icon {
       font-size: 1rem;
-      font-weight: 500;
-      color: #fff;
-      background: linear-gradient(170deg, $color-secondary, $color-primary);
-      border-radius: 1.563rem;
-      text-decoration: none;
-      box-shadow: 5px 5px 15px lighten($color-icon,25%);
+      margin-right: 15px;
     }
 
-    &__content__btn a:hover {
-      background: linear-gradient(
-        170deg, 
-        lighten($color-secondary, 5%),
-        lighten($color-primary, 5%)
-        
-      );
-      box-shadow: 5px 5px 10px $color-icon;
+    &__input {
+      font-family: $font-txt;
+      font-size: 1.1rem;
+      font-weight: 500;
+      border: none;
+      background-color: $color-grey2;
     }
+  }
+
+  &__content__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__content__text h1,
+  h2 {
+    width: 100%;
+    font-family: $font-txt;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 2.65rem 15% 0;
+    background-color: $color-grey3;
+  }
+
+  &__content__text h3 {
+    width: 100%;
+    font-family: $font-txt;
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 0.7rem 5% 0;
+    background-color: $color-grey3;
+  }
+
+  &__content__btn {
+    display: inline-block;
+    padding-top: 2.8rem;
+    text-align: center;
+  }
+
+  &__content__btn a {
+    padding: 0.938rem 1.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    border-radius: 1.563rem;
+    text-decoration: none;
+    box-shadow: 5px 5px 15px lighten($color-icon, 25%);
+  }
+
+  &__content__btn a:hover {
+    background: linear-gradient(
+      170deg,
+      lighten($color-secondary, 5%),
+      lighten($color-primary, 5%)
+    );
+    box-shadow: 5px 5px 10px $color-icon;
   }
 }
 
 /* Working section */
 .working {
   position: relative;
-  z-index: 0;
-  @include for-phone-only {
-    width: 100%;
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  @include media(for-phone) {
     height: 27.5rem;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
+  }
 
-    &__title {
-      margin-top: 3.125rem;
-      margin-left: 1.3rem;
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: #000000;
+  @include media(for-tablet, for-desktop) {
+    height: 17rem;
+  }
+
+  &__title h3 {
+    width: 100%;
+    max-width: 64rem;
+    margin: 3.125rem 5% 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000000;
+    @include media(for-tablet, for-desktop) {
+      margin: 3.125rem 1% 0;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    list-style: none;
+    counter-reset: number;
+
+    @include media(for-phone) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    &__btn {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      list-style: none;
-      counter-reset: number;
-
-      @include home-btn;
+    @include media(for-desktop, for-tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     }
+
+    @include home-btn;
   }
 }
 
 /* Restaurants section */
 .restaurants {
-  @include for-phone-only {
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 64rem;
+  min-height: 40rem;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+  @include media(for-phone) {
     height: 76.625rem;
-    @include flex(column, nowrap, center, flex-start);
+  }
+  @include media(for-tablet, for-desktop) {
+    height: 41rem;
+  }
+
+  &__title h3 {
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 5% 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000000;
     background-color: #f6f6f6;
-
-    &__title h3 {
-      margin-top: -0.6rem;
-      margin-left: 1.3rem;
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: #000000;
-      background-color: #f6f6f6;
+    @include media(for-tablet, for-desktop) {
+      margin: 3.125rem 1% 0;
     }
+  }
 
-    &__cards {
-      width: 100%;
+  &__cards {
+    width: 95%;
+    max-width: 62rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    @include media(for-phone) {
       @include flex(column, nowrap, center, flex-start);
     }
-    @include restaurant-card;
+    @include media(for-tablet, for-desktop) {
+      margin-bottom: 3rem;
+    }
   }
+
+  @include media(for-tablet, for-desktop) {
+    &__cards > * {
+      flex: 0 0 45%;
+    }
+  }
+  @include restaurant-card;
 }

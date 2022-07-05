@@ -1,50 +1,57 @@
 // Input files
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
+@use "../utils/responsive" as *;
 
 /* Working section button */
 @mixin home-btn {
   &__content {
-        @include flex(row, nowrap, flex-start, center);
-        position: relative;
-        margin: 1.6rem auto;
-        width: 20.2rem;
-        height: 4.688rem;
-        font-weight: 500;
-        background-color: #f6f6f6;
-        border-radius: 1.25rem;
-        box-shadow: 5px 5px 10px lighten($color-icon, 25%);
+    @include flex(row, nowrap, flex-start, center);
+    position: relative;
+    margin: 1.6rem auto 0;
+    width: 80%;
+    height: 4.688rem;
+    font-weight: 500;
+    background-color: #f6f6f6;
+    border-radius: 1.25rem;
+    box-shadow: 5px 5px 10px lighten($color-icon, 25%);
+    @include media(for-tablet) {
+      width: 25%;
+    }
+    @include media(for-desktop) {
+      width: 30%;
+    }
 
-        &:before {
-          counter-increment: number 1;
-          content: counter(number) "";
-          color: white;
-          background-color: $color-primary;
-          width: 1.5rem;
-          height: 1.5rem;
-          border-radius: 0.75rem;
-          position: absolute;
-          left: -0.75rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+    &:before {
+      counter-increment: number 1;
+      content: counter(number) "";
+      color: white;
+      background-color: $color-primary;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 0.75rem;
+      position: absolute;
+      left: -0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        & i {
-          color: $color-icon;
-          padding: 0 1.6rem 0 2.5rem;
-          text-align: center;
-        }
+    & i {
+      color: $color-icon;
+      padding: 0 1.6rem 0 2.5rem;
+      text-align: center;
+    }
 
-        &:hover {
-          background-color: lighten($color-primary, 35%);
-          transform: scale(1.05);
-          transition: 0.2s ease-in-out;
-          box-shadow: 5px 5px 10px $color-icon;
+    &:hover {
+      background-color: lighten($color-primary, 35%);
+      transform: scale(1.05);
+      transition: 0.2s ease-in-out;
+      box-shadow: 5px 5px 10px $color-icon;
 
-          & i {
-            color: $color-primary;
-          }
-        }
+      & i {
+        color: $color-primary;
       }
+    }
+  }
 }

@@ -3,37 +3,41 @@
 
 // Media Queries
 
-// Small devices (landscape phones, 576px and up)
-@mixin for-phone-only {
+// Small devices (landscape phones, 768px and down)
+@mixin for-phone {
   @media (max-width: map-get($breakpoint, phone-only)) {
     @content;
   }
 }
 
-// Medium devices (tablets, 768px and up)
-@mixin for-tablet-portrait-up {
-  @media (max-width: map-get($breakpoint, tablet-portrait)) {
+// Medium devices (tablets, between 768px and 1024px)
+@mixin for-tablet {
+  @media (min-width: map-get($breakpoint, tablet-min)) and (max-width: map-get($breakpoint, tablet-max)) {
     @content;
   }
 }
 
-// Large devices (desktops, 992px and up)
-@mixin for-tablet-landscape-up {
-  @media (max-width: map-get($breakpoint, tablet-landscape)) {
-    @content;
-  }
-}
-
-// X-Large devices (large desktops, 1200px and up)
+// Large devices (desktops, 1024px and up)
 @mixin for-desktop {
-  @media (max-width: map-get($breakpoint, desktop)) {
+  @media (min-width: map-get($breakpoint, desktop)) {
     @content;
   }
 }
 
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin for-desktop-up {
-  @media (min-width: map-get($breakpoint, desktop-up)) {
-    @content;
+@mixin media($keys...) {
+  @each $key in $keys {
+    @if $key == for-phone {
+      @include for-phone {
+        @content;
+      }
+    } @else if $key == for-tablet {
+      @include for-tablet {
+        @content;
+      }
+    } @else if $key == for-desktop {
+      @include for-desktop {
+        @content;
+      }
+    }
   }
 }
