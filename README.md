@@ -48,7 +48,7 @@ leur mise en page est libre.
 - Les pages devront passer la validation W3C en HTML et CSS sans erreur.
 - Le site doit être parfaitement compatible avec les dernières versions desktop de
   Chrome et Firefox.
-- [Le code devra utiliser les balises sémantiques et ne doit contenir aucune erreur ni alerte au validateur W3C HTML et CSS.](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmathisbarre.github.io%2FMathisBarre_2_14102020%2F)
+- [Le code devra utiliser les balises sémantiques et ne doit contenir aucune erreur ni alerte au validateur W3C HTML et CSS.](https://michaelbr-dev.github.io/OCR-Projet-3/)
 
 ### Contenu des pages
 
