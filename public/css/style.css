@@ -103,7 +103,6 @@ th {
   100% {
     opacity: 0;
     z-index: -1;
-    animation-fill-mode: forwards;
   }
 }
 @keyframes itemLoader {
@@ -190,6 +189,11 @@ th {
 }
 .header__logo a {
   text-decoration: none;
+  color: black;
+}
+.header__logo a:hover {
+  text-decoration: none;
+  color: black;
 }
 .header__logo a:visited {
   color: black;
