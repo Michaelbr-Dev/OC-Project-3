@@ -14,8 +14,9 @@ Dynamisez une page web avec des animations CSS (ohmyfood!)
 
 ## Maquette
 
-![maquette accueil ohmyfood](https://github.com/Michaelbr-Dev/OCR-Projet-3/blob/main/images/github/accueil.png)
-![maquette restaurant ohmyfood](https://github.com/Michaelbr-Dev/OCR-Projet-3/blob/main/images/github/menu-a-la-francaise.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/Michaelbr-Dev/OCR-Projet-3/main/public/images/github/maquette-gh.png">
+</p>
 
 ## Éléments fournis par l'entreprise virtuelle.
 
