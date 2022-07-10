@@ -14,8 +14,8 @@
 }
 
 .container {
-    margin: auto;
-    position: relative;
+  margin: auto;
+  position: relative;
 }
 
 .menu {
@@ -45,6 +45,7 @@
     font-size: 1.5rem;
     padding: 0.3rem;
     @include heart;
+    -webkit-text-fill-color: #f6f6f6;
   }
 }
 
@@ -96,7 +97,7 @@
   animation-timing-function: ease-in;
   animation-fill-mode: both;
   max-width: 90%;
-  
+
   &__header {
     display: flex;
     flex-direction: column;
@@ -146,7 +147,7 @@
     justify-content: center;
     transition-duration: 0.5s;
   }
-  
+
   &:hover &__checked {
     margin-right: -1rem;
   }
@@ -174,7 +175,6 @@
   &:hover {
     box-shadow: 0.25rem 0.25rem 1rem $color-icon;
   }
-  
 }
 
 .order__btn {
@@ -186,17 +186,17 @@
   animation-fill-mode: both;
 
   a {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
-    padding:1.063rem 3rem;
-    background: linear-gradient(170deg, #FF79DA, #9356DC);
+    padding: 1.063rem 3rem;
+    background: linear-gradient(170deg, #ff79da, #9356dc);
     border-radius: 1.563rem;
     box-shadow: 0.25rem 0.25rem 1rem lighten($color-icon, 25%);
-    
+
     &:visited {
-      color: #FFF;
+      color: #fff;
     }
-    
+
     &:hover {
       box-shadow: 0.25rem 0.25rem 1rem $color-icon;
     }
