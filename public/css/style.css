@@ -679,7 +679,7 @@ th {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.5s ease-in-out;
   -webkit-background-clip: text;
   background-image: linear-gradient(0deg, #FF79DA, #9356DC);
 }
@@ -755,7 +755,7 @@ th {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.5s ease-in-out;
   -webkit-background-clip: text;
   background-image: linear-gradient(0deg, #FF79DA, #9356DC);
   -webkit-text-fill-color: #f6f6f6;
