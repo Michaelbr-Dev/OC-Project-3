@@ -352,11 +352,11 @@ th {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0.8rem 0 0.625rem 5.1rem;
+  padding: 0.8rem 0 0.625rem 0;
 }
 .explore__location__icon {
   font-size: 1rem;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 .explore__location__input {
   font-family: "Roboto", sans-serif;
@@ -364,6 +364,7 @@ th {
   font-weight: 500;
   border: none;
   background-color: #EAEAEA;
+  width: 150px;
 }
 .explore__content__text {
   display: flex;
@@ -437,7 +438,7 @@ th {
   }
 }
 .working__title h3 {
-  width: 100%;
+  width: 70%;
   max-width: 64rem;
   margin: 3.125rem 5% 0;
   font-size: 1.5rem;
@@ -565,7 +566,7 @@ th {
   }
 }
 .restaurants__title h3 {
-  width: 90%;
+  width: 50%;
   max-width: 64rem;
   margin: 0 5% 0;
   font-size: 1.5rem;
