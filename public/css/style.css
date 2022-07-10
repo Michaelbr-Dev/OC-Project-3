@@ -426,11 +426,13 @@ th {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .working {
+    width: 95%;
     height: 17rem;
   }
 }
 @media (min-width: 1024px) {
   .working {
+    width: 95%;
     height: 17rem;
   }
 }
@@ -552,11 +554,13 @@ th {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .restaurants {
+    width: 90%;
     height: 41rem;
   }
 }
 @media (min-width: 1024px) {
   .restaurants {
+    width: 90%;
     height: 41rem;
   }
 }

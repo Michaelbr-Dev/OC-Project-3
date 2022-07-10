@@ -106,6 +106,7 @@
   }
 
   @include media(for-tablet, for-desktop) {
+    width: 95%;
     height: 17rem;
   }
 
@@ -158,6 +159,7 @@
     height: 76.625rem;
   }
   @include media(for-tablet, for-desktop) {
+    width: 90%;
     height: 41rem;
   }
 
