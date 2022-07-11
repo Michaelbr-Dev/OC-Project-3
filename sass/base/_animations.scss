@@ -48,6 +48,15 @@
   }
 }
 
+@keyframes heartOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 // Menu item animation
 @keyframes itemLoader {
   0% {
@@ -56,15 +65,6 @@
   }
   50% {
     opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes heartOpacity {
-  0% {
-    opacity: 0;
   }
   100% {
     opacity: 1;
