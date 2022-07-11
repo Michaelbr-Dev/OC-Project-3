@@ -584,14 +584,14 @@ th {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .restaurants__title h3 {
-    margin-left: 5%;
+    margin: 0 auto;
     padding-top: 4rem;
     max-width: 64rem;
   }
 }
 @media (min-width: 1024px) {
   .restaurants__title h3 {
-    margin-left: 5%;
+    margin: 0 auto;
     padding-top: 4rem;
     max-width: 64rem;
   }
