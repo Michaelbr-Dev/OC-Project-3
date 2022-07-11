@@ -173,7 +173,7 @@
     color: #000000;
     background-color: #f6f6f6;
     @include media(for-tablet, for-desktop) {
-      margin: 0 auto;
+      margin-left: 5%;
       padding-top: 4rem;
       max-width: 64rem;
     }
