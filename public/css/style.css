@@ -117,6 +117,14 @@ th {
     opacity: 1;
   }
 }
+@keyframes heartOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Preloader */
 .preloader {
   position: fixed;
@@ -555,13 +563,13 @@ th {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .restaurants {
-    width: 90%;
+    width: 100%;
     height: 41rem;
   }
 }
 @media (min-width: 1024px) {
   .restaurants {
-    width: 90%;
+    width: 100%;
     height: 41rem;
   }
 }
@@ -679,11 +687,12 @@ th {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 1s ease-in-out;
   -webkit-background-clip: text;
   background-image: linear-gradient(0deg, #FF79DA, #9356DC);
 }
 .restaurants__card__content__icon:hover {
+  animation: heartOpacity 1s forwards;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: transparent;
 }
@@ -755,12 +764,13 @@ th {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 1s ease-in-out;
   -webkit-background-clip: text;
   background-image: linear-gradient(0deg, #FF79DA, #9356DC);
   -webkit-text-fill-color: #f6f6f6;
 }
 .menu__icon:hover {
+  animation: heartOpacity 1s forwards;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: transparent;
 }
@@ -915,42 +925,46 @@ th {
 }
 
 .delay-1 {
-  animation-delay: 0.1s;
+  animation-delay: 0.0909090909s;
 }
 
 .delay-2 {
-  animation-delay: 0.2s;
+  animation-delay: 0.1818181818s;
 }
 
 .delay-3 {
-  animation-delay: 0.3s;
+  animation-delay: 0.2727272727s;
 }
 
 .delay-4 {
-  animation-delay: 0.4s;
+  animation-delay: 0.3636363636s;
 }
 
 .delay-5 {
-  animation-delay: 0.5s;
+  animation-delay: 0.4545454545s;
 }
 
 .delay-6 {
-  animation-delay: 0.6s;
+  animation-delay: 0.5454545455s;
 }
 
 .delay-7 {
-  animation-delay: 0.7s;
+  animation-delay: 0.6363636364s;
 }
 
 .delay-8 {
-  animation-delay: 0.8s;
+  animation-delay: 0.7272727273s;
 }
 
 .delay-9 {
-  animation-delay: 0.9s;
+  animation-delay: 0.8181818182s;
 }
 
 .delay-10 {
+  animation-delay: 0.9090909091s;
+}
+
+.delay-11 {
   animation-delay: 1s;
 }
 
