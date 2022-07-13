@@ -161,7 +161,7 @@
   }
   @include media(for-tablet, for-desktop) {
     width: 100%;
-    height: 41rem;
+    height: 45rem;
   }
 
   &__title {
@@ -183,7 +183,7 @@
     color: #000000;
     background-color: #f6f6f6;
     @include media(for-tablet, for-desktop) {
-      margin: 3.125rem 1% 0;
+      margin: 0 1% 0;
       padding-top: 4rem;
       max-width: 64rem;
     }
