@@ -109,4 +109,4 @@ Pages de menu
 
 ## Visualiser le site
 
-- [Projet 3 - ohmyfood!](https://michaelbr-dev.github.io/OCR-Projet-3/)
+- [Projet 3 - ohmyfood!](https://michaelbr-dev.github.io/OC-Project-3/)
